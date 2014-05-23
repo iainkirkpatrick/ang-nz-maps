@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-5">
+    <h2>Population</h2>
+    <p>Like most western nations, New Zealand's population continues to increase steadily.</p>
+    <p>(D3 line graph)</p>
+    <p>However, <strong><em>where</em></strong> the population changes is not quite so straightforward.</p>
+    <small>
+    <p>Text and graphics go in this section (smallish D3 graphs for example, complementary to the map and text).</p>
+
+    <p>I think aim for 5-7 sets of maps and data - pick 5-7 points that interest me out of the census. They don't need to be that massive, but the bigger / more interesting the better i guess.</p>
+
+    <p>REMEMBER - map data should be inherently SPATIAL, it should make sense to have on a map.</p>
+
+    <p>Also think about map styling - do i want labelling above choro? below ok? other map types?</p>
+
+    <p>Further sections 'appear' on scrolling, using CSS effects. Be thinking... how would Teehan+Lax be designing this? How would Mapbox have this looking?</p>
+
+    <p>If this is population, consider using scale-dependent-drawing and having different levels of population (TA, regions etc?). Tech implementation at https://www.mapbox.com/tilemill/docs/guides/advanced-map-design/</p>
+
+    <p>Maybe not population - too boring, spatial elements too obvious. What about demographics - aging pop? still scale-dependant etc.</p>
+    </small>
+  </div>
+  <div class="col-md-7" ng-controller="PopulationCtrl">
+    <!-- <div id='map'></div> -->
+    <leaflet tiles="tiles" center="center" geojson="geojson"></leaflet>
+  </div>
+</div>
+
+<script>
+// //init Mapbox basemap
+// var map = L.mapbox.map('map', 'envintage.i9eofp14', {
+//     shareControl: true
+// })
+// .setView([-40.988, 172.441], 6)
+// .addControl(L.mapbox.geocoderControl('envintage.i9eofp14'));
+
+// // var featureLayer = L.mapbox.featureLayer()
+// //     .addTo(map);
+
+// // featureLayer.loadURL('../../data/test_1.json');
+// </script>

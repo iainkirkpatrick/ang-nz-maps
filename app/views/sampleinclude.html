@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-7">
+    <div id='sampleMap'></div>
+  </div>
+  <div class="col-md-5">
+    <h4>This is a sample content section.</h4>
+    <p>Text and graphics go in this section (smallish D3 graphs for example, complementary to the map and text).</p>
+
+    <p>I think aim for 5-7 sets of maps and data - pick 5-7 points that interest me out of the census. They don't need to be that massive, but the bigger / more interesting the better i guess.</p>
+
+    <p>REMEMBER - map data should be inherently SPATIAL, it should make sense to have on a map.</p>
+
+    <p>Also think about map styling - do i want labelling above choro? below ok? other map types?</p>
+
+    <p>Further sections 'appear' on scrolling, using CSS effects. Be thinking... how would Teehan+Lax be designing this? How would Mapbox have this looking?</p>
+
+    <p>If this is population, consider using scale-dependent-drawing and having different levels of population (TA, regions etc?). Tech implementation at https://www.mapbox.com/tilemill/docs/guides/advanced-map-design/</p>
+
+    <p>Maybe not population - too boring, spatial elements too obvious. What about demographics - aging pop? still scale-dependant etc.</p>
+  </div>
+</div>
+
+<script>
+// create a map in the "map" div, set the view to a given place and zoom
+var sampleMap = L.map('sampleMap').setView([51.505, -0.09], 13);
+
+// create a tile layer sourced from mapbox
+L.tileLayer('https://{s}.tiles.mapbox.com/v3/envintage.i9eofp14/{z}/{x}/{y}.png').addTo(sampleMap);
+</script>
