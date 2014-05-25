@@ -5,7 +5,7 @@
     <p>(D3 line graph)</p>
     <p>However, <strong><em>where</em></strong> the population changes is not quite so straightforward.</p>
     <small>
-    <p>Text and graphics go in this section (smallish D3 graphs for example, complementary to the map and text).</p>
+    <p>Text and graphics go in this section (smallish D3 graphs for example, complementary to the map and text). Where appropriate, cool to have text / graphics that link with the state / hover-state of map elements (implement with two-way data binding?).</p>
 
     <p>I think aim for 5-7 sets of maps and data - pick 5-7 points that interest me out of the census. They don't need to be that massive, but the bigger / more interesting the better i guess.</p>
 
@@ -18,11 +18,18 @@
     <p>If this is population, consider using scale-dependent-drawing and having different levels of population (TA, regions etc?). Tech implementation at https://www.mapbox.com/tilemill/docs/guides/advanced-map-design/</p>
 
     <p>Maybe not population - too boring, spatial elements too obvious. What about demographics - aging pop? still scale-dependant etc.</p>
+
+    <hr>
+    
+    <h4>NOTES FOR THIS SECTION:</h4>
+    <p>Point out how it immediately appears that the North Island is losing people, while the South Island is gaining. This is against the conventional thought that population drifts north in NZ, but is backed up by Statistics NZ findings at http://www.stats.govt.nz/browse_for_stats/population/mythbusters/the-drift-north.aspx</p>
     </small>
   </div>
   <div class="col-md-7" ng-controller="PopulationCtrl">
     <!-- <div id='map'></div> -->
-    <leaflet tiles="tiles" center="center" geojson="geojson"></leaflet>
+    <leaflet tiles="tiles" center="center" legend="legend" geojson="geojson"></leaflet>
+    <button ng-click="toAU()">change to AU geojson</button>
+    <button ng-click="toTA()">change to TA geojson</button>
   </div>
 </div>
 

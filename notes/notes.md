@@ -9,6 +9,10 @@ ideally be able to serve this as a SPA up on iainkirkpatrick.me - for it to work
 
 data should probably be GEOJSON or even TOPOJSON to restrict data costs.
 
+ideally put the shapefiles in a POSTGIS db, and run commands to do joins, spatial joins, ogr2ogr for format conversions etc.
+then have makefiles for the most common operations. This would all just avoid the need to use GUI of QGIS for this stuff, plus good exp with spatial DB.
+(but could still load layers from DB into QGIS if need be)
+
 i like the notion of a SPA, long-scrolling - think some of the Mapbox demo pages, just keep scrolling for different maps with different data? fade-ins, fadeouts? how will long-scrolling work with large map divs, accidental zooming?
 
 **sketch is up in my book**.
